@@ -1,0 +1,36 @@
+{
+  "students": [
+    {
+      "avatar_url": "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8",
+      "name": "Tristian Gomes Lacerda",
+      "email": "sempreTriste@gmail.com",
+      "birth": 1317772800000,
+      "grade": "5° ano",
+      "weekTime": "5000",
+      "id": 1,
+      "created_at": 1644705925648
+    }
+  ],
+  "instructors": [
+    {
+      "id": 1,
+      "name": "Lana Parla Bonasera",
+      "birth": 152668800000,
+      "degree": "M",
+      "teaching": "O",
+      "services": "Geometria Aéreo Espacial",
+      "avatar_url": "https://images.unsplash.com/photo-1613324765419-5a10337ff8bc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "created_at": 1624066070038
+    },
+    {
+      "id": 3,
+      "name": "Ada Lovelace",
+      "birth": -683769600000,
+      "degree": "PMD",
+      "teaching": "O",
+      "services": "Computação Quântica",
+      "avatar_url": "https://images.unsplash.com/photo-1613324767341-a6cca90c02f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=334&q=80",
+      "created_at": 1624067647731
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{% extends "layout.njk" %}
+
+
+{% block links %}
+<link rel="stylesheet" href="/styles/menu.css">
+{% endblock links %}
+
+{% block title %}
+<title>Page-Menu</title>
+{% endblock title %}
+
+{% block pages %}
+<div class="links">
+    <a href="/">
+        Rocketseat Home
+    </a>
+    <a href="/contents">Cursos</a>
+    <a href="./instructors">Menu dos Professores</a>
+    <a href="./students" class="active">Menu dos Estudantes</a>
+</div>
+{% endblock pages %}
+
+{% block content %}
+<div class="card table-container">
+    <a href="/students/create">Novo</a>
+    <table width="100%">
+        <thead>
+            <tr>
+                <th>Aluno</th>
+                <th>Grau</th>
+                <th>Carga Horária Semanal</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr>
+                    <td>
+                        <span style="background-image: url({{student.avatar_url}})"></span>
+                        {{ student.name }}
+                    </td>
+                     <td>{{ student.grade }}</td>
+                    <td>{{ student.weekTime }}</td>
+                    <td><a href="/students/{{ student.id }}">ver</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

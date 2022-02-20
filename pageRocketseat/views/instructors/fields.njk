@@ -1,0 +1,72 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <div>
+        <input 
+            type="url" 
+            name="avatar_url"
+            placeholder="http://" 
+            value="{{ instructor.avatar_url }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Instrutor</div>
+    <div>
+        <input 
+            type="text"
+            name="name"
+            placeholder="Nome do Instrutor"
+            value="{{ instructor.name }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Data de nascimento</div>
+    <div>
+        <input 
+            type="date" 
+            name="birth"
+            value="{{ instructor.birth }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Grau de Formação</div>
+    <div>
+        <select name="degree" >
+            <option value='H' {% if instructor.degree == 'H' %} selected {% endif %}>Ensino Médio</option>
+            <option value='C' {% if instructor.degree == 'C' %} selected {% endif %}>Bacharel</option>
+            <option value='P' {% if instructor.degree == 'P' %} selected {% endif %}>Pos. Graduação</option>
+            <option value='M' {% if instructor.degree == 'M' %} selected {% endif %}>Mestrado</option>
+            <option value='D' {% if instructor.degree == 'D' %} selected {% endif %}>Doutorado</option>
+            <option value='PD' {% if instructor.degree == 'PD' %} selected {% endif %}>Pos. Doutorado</option>
+            <option value='PM' {% if instructor.degree == 'PM' %} selected {% endif %}>Mestrado e Doutorado</option>
+            <option value='PMD' {% if instructor.degree == 'PMD' %} selected {% endif %}>Mestrado, Doutorado e Pos. Doutorado</option>
+        </select>
+    </div>
+</div>
+
+<div class="item">
+    <div>Ensino</div>
+    <div>
+        <span><input type="radio" name="teaching" value="P" {% if instructor.teaching == "P" %} checked {% endif %}>Presencial</span>
+        <span><input type="radio" name="teaching" value="O" {% if instructor.teaching == "O" %} checked {% endif %}>Online</span>
+    </div>
+</div>
+
+<div class="item">
+    <div>Área de atuação</div>
+    <div>
+        <input 
+            type="text" 
+            name="services"
+            placeholder="Separe os serviços prestados por vírgula"
+            value="{{ instructor.services }}"
+        >
+    </div>
+</div>
+
+<button type="submit">Salvar</button>

@@ -1,0 +1,221 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:400,700&display=swap";
+
+/* === CARD === */
+
+.card {
+    background-color: white;
+    width: 800px;
+    min-height: 400px;
+
+    /* espaçamento ao centro */
+    margin: 45px auto;
+
+    /* grid dividido no meio*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* sombra */
+    box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.4);
+
+    /* animation */
+    opacity: 0;
+    animation-name: up;
+    animation-duration: 700ms;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-play-state: running;
+
+}
+
+/* Animation */
+@keyframes up {
+    /* Start 0% */
+    from {
+        transform: translateY(20px);
+    }
+    /* End 100% */
+    to {
+        opacity: 1;
+    }
+}
+
+/* details */
+
+
+.details {
+    padding: 32px;
+}
+
+.details .item {
+    border-bottom: 1px solid rgba(0, 0 , 0, 0.1);
+    padding: 16px 0;
+}
+
+.details .item:last-child {
+    border:nome;
+}
+
+.details, h3
+.details .item div:nth-child(1) {
+    font-size: 14px;
+    line-height: 24px;
+    color: #777;
+    letter-spacing: 0.7px;
+    font-weight: normal;
+}
+
+.details .item div:nth-child(2) {
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.details h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--rocketseat-color);
+}
+
+.details .item div:nth-child(2) span {
+    padding: 8px 16px;
+    background-color: var(--tec-color);
+    border-radius: 16px;
+    color: #777;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+
+}
+
+
+/* FORM */
+input, select {
+    width: 100%;
+    outline: none;
+    color: #555;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input[type="radio"] {
+    width: 100%;
+    margin-right: 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    cursor: pointer;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button[type="submit"],
+a.button {
+    padding: 8px 32px;
+    background-color: var(--rocketseat-color);
+    color: white;
+    border-radius: 4px;
+    margin-top: 32px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+a.button {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    text-decoration: none;
+}
+
+select {
+    font-size: 19px;
+    font-weight: normal;
+    outline: auto;
+    color: #555;
+}
+
+#form-delete button[type="submit"] {
+    margin-top: 8px;
+    background-color: var(--rocktec-color);
+    cursor: pointer;
+}
+
+
+/* Instructor Table Style */
+.table-container {
+    display: block;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.table-container table {
+    border-spacing: 0;
+}
+
+.table-container thead tr th {
+    text-align: left;
+}
+
+td, th {
+    padding: 16px;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+th {
+    text-transform: uppercase;
+    color: #777;
+    font-size: 14px;
+}
+
+td {
+    font-weight: bold;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr td:first-child {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    align-items: center;
+}
+
+tbody tr td:first-child span {
+    width: 48px;
+    height: 48px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: 3px 1px 6px -4px black;
+    border: 2px solid white;
+}
+
+tbody tr td:last-child a,
+.table-container > a {
+    background-color: var(--rocketseat-color);
+    padding: 8px 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.table-container > a {
+    background-color: #bd69699d;
+    margin-bottom: 16px;
+    margin-left: 8px;
+    display: inline-block;
+}
+
+.table-container thead tr th:last-child,
+td:last-child {
+    text-align: center;
+}

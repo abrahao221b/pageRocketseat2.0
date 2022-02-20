@@ -1,0 +1,116 @@
+<div class="item">
+    <div>Avatar URL</div>
+    <div>
+        <input 
+            type="url" 
+            name="avatar_url"
+            placeholder="http://" 
+            value="{{ student.avatar_url }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Nome</div>
+    <div>
+        <input 
+            type="text"
+            name="name"
+            value="{{ student.name }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Email</div>
+    <div>
+        <input 
+            type="email"
+            name="email"
+            value="{{ student.email }}"
+        >
+    </div>
+</div>
+
+<div class="item">
+    <div>Data de nascimento</div>
+    <div>
+        <input 
+            type="date" 
+            name="birth"
+            value="{{ student.birth }}"
+        >
+    </div>
+</div>
+
+{# Ano escolar #}
+<div class="item">
+    <div>Ano Escolar</div>
+    <div>
+        <select name="grade">
+            <option value="5° ano"
+                {% if member.blood == "5° ano" %}
+                    selected
+                {% endif %}>
+                    5° ano
+            </option>
+            <option value="6° ano"
+                {% if member.blood == "6° ano" %}
+                    selected
+                {% endif %}>
+                    6° ano
+            </option>
+            <option value="7° ano"
+                {% if member.blood == "7° ano" %}
+                    selected
+                {% endif %}>
+                    7° ano
+            </option>
+            <option value="8° ano"
+                {% if member.blood == "8° ano" %}
+                    selected
+                {% endif %}>
+                    8° ano
+            </option>
+            <option value="9° ano"
+                {% if member.blood == "9° ano" %}
+                    selected
+                {% endif %}>
+                    9° ano
+            </option>
+            <option value="1° ano ensino médio"
+                {% if member.blood == "1° ano ensino médio" %}
+                    selected
+                {% endif %}>
+                    1° ano ensino médio
+            </option>
+            <option value="2° ano ensino médio"
+                {% if member.blood == "2° ano ensino médio" %}
+                    selected
+                {% endif %}>
+                    2° ano ensino médio
+            </option>
+            <option value="3° ano ensino médio"
+                {% if member.blood == "3° ano ensino médio" %}
+                    selected
+                {% endif %}>
+                    3° ano ensino médio
+            </option>
+        </select>
+    </div>
+</div>
+
+{# Carga horária semanal #}
+<div class="item">
+    <div>Carga horária semanal</div>
+    <div>
+        <input 
+            type="number" 
+            name="weekTime"
+            value="{{ student.weekTime }}"
+        >
+    </div>
+</div>
+
+
+<button type="submit">Salvar</button>
